@@ -1,9 +1,15 @@
-package com.sample.spring.jersey.swagger.mongo.beans;
+package com.example.spring.jersey.swagger.mongo.beans;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * @author Rachid
+ * 
+ * A person bean
+ *
+ */
 @Document(collection = "persons")
 public class Person {
 
@@ -17,8 +23,6 @@ public class Person {
 	Integer age;
 
 	String job;
-
-	//getter, setter, toString, Constructors
 
 	public Integer getPersonId() {
 		return personId;

@@ -1,7 +1,17 @@
-package com.sample.spring.jersey.swagger.beans;
+package com.example.spring.jersey.swagger.beans;
 
 import java.util.List;
 
+import com.example.spring.jersey.swagger.beans.Message;
+
+/**
+ * @author Rachid
+ *
+ * @param <T>
+ * 
+ * A generic response for a web service
+ * 
+ */
 public interface GenericResponse<T> {
 
     /**

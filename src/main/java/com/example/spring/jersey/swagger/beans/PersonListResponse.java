@@ -1,9 +1,15 @@
-package com.sample.spring.jersey.swagger.beans;
+package com.example.spring.jersey.swagger.beans;
 
 import java.util.Collection;
 
-import com.sample.spring.jersey.swagger.mongo.beans.Person;
+import com.example.spring.jersey.swagger.mongo.beans.Person;
 
+/**
+ * @author Rachid
+ * 
+ * This class presents a persons list response
+ *
+ */
 public class PersonListResponse extends AbstractGenericResponse<Collection<Person>> {
 
     Collection<Person> result;

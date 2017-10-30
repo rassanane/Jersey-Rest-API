@@ -1,4 +1,4 @@
-package com.sample.spring.jersey.swagger.dao;
+package com.example.spring.jersey.swagger.dao;
 
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 import static org.springframework.data.mongodb.core.query.Query.query;
@@ -11,8 +11,14 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Repository;
 
-import com.sample.spring.jersey.swagger.mongo.beans.Person;
+import com.example.spring.jersey.swagger.mongo.beans.Person;
 
+/**
+ * @author Rachid
+ *
+ * A person DAO to interact with MongoDB database
+ *
+ */
 @Repository("personDAO")
 public class PersonDAO {
 
@@ -26,7 +32,6 @@ public class PersonDAO {
 
 		Query query = new Query();
 		query.addCriteria(Criteria.where("personId").is(person.getPersonId()));
-		//query.fields().include("name");
 
 		Update update = new Update();
 		update.set("name", person.getName());

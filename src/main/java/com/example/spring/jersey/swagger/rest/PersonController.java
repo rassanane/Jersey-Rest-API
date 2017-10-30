@@ -1,4 +1,4 @@
-package com.sample.spring.jersey.swagger.rest;
+package com.example.spring.jersey.swagger.rest;
 
 import java.util.List;
 
@@ -19,15 +19,21 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.sample.spring.jersey.swagger.beans.PersonListResponse;
-import com.sample.spring.jersey.swagger.beans.PersonResponse;
-import com.sample.spring.jersey.swagger.mongo.beans.Person;
-import com.sample.spring.jersey.swagger.service.PersonService;
+import com.example.spring.jersey.swagger.beans.PersonListResponse;
+import com.example.spring.jersey.swagger.beans.PersonResponse;
+import com.example.spring.jersey.swagger.mongo.beans.Person;
+import com.example.spring.jersey.swagger.service.PersonService;
 import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
 import com.wordnik.swagger.annotations.ApiResponse;
 import com.wordnik.swagger.annotations.ApiResponses;
 
+/**
+ * @author Rachid
+ * 
+ * A person rest service
+ *
+ */
 @Controller
 @Api(value="/Persons", description = "Endpoint for Persons with MongoDB")
 @Path("/persons")
@@ -177,7 +183,7 @@ public class PersonController {
         		.build();
     }
     
-    //Appelé avant le Post pour ajouter els headers
+    //The HTTP verb called before a Post
     @OPTIONS
     public Response getOptionsPersons() {
 
@@ -190,7 +196,7 @@ public class PersonController {
             
     }
     
-    //Appelé avant suppression
+    //The HTTP verb called before a Put
     @OPTIONS
     @Path("{personId}")
     public Response getOptionsPerson(@PathParam("personId") final Integer personId) {

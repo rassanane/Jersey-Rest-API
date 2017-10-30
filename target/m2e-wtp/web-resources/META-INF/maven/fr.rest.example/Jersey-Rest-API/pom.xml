@@ -65,7 +65,7 @@
                             <!-- The schema directory or xsd files. -->
                             <schemaDirectory>${basedir}/src/main/resources</schemaDirectory>
                             <!-- The package in which the source files will be generated. -->
-                            <generatePackage>com.sample.spring.jersey.swagger.beans</generatePackage>
+                            <generatePackage>com.example.spring.jersey.swagger.beans</generatePackage>
                             <args>
                                 <arg>-XtoString</arg>
                                 <arg>-Xequals</arg>

@@ -1,12 +1,12 @@
-package com.sample.spring.jersey.swagger.service;
+package com.example.spring.jersey.swagger.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sample.spring.jersey.swagger.dao.PersonDAO;
-import com.sample.spring.jersey.swagger.mongo.beans.Person;
+import com.example.spring.jersey.swagger.dao.PersonDAO;
+import com.example.spring.jersey.swagger.mongo.beans.Person;
 
 @Service
 public class PersonService {

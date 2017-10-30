@@ -1,9 +1,15 @@
-package com.sample.spring.jersey.swagger.beans;
+package com.example.spring.jersey.swagger.beans;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.sample.spring.jersey.swagger.mongo.beans.Person;
+import com.example.spring.jersey.swagger.mongo.beans.Person;
 
+/**
+ * @author Rachid
+ * 
+ * This class presents a person response
+ *
+ */
 @XmlRootElement
 public class PersonResponse extends AbstractGenericResponse<Person>
 {
@@ -18,4 +24,5 @@ public class PersonResponse extends AbstractGenericResponse<Person>
     public void setResult(Person person) {
         result = person;
     }
+    
 }

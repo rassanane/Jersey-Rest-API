@@ -1,4 +1,4 @@
-package com.sample.restassured.test;
+package com.example.restassured.test;
 
 import org.junit.BeforeClass;
 
@@ -6,29 +6,33 @@ import com.jayway.restassured.RestAssured;
 
 public class FunctionalTest {
 
-    @BeforeClass
-    public static void setup() {
-        String port = System.getProperty("server.port");
-        if (port == null) {
-            RestAssured.port = Integer.valueOf(8080);
-        }
-        else{
-            RestAssured.port = Integer.valueOf(port);
-        }
+	@BeforeClass
+	public static void setup() {
+		
+		String port = System.getProperty("server.port");
+		
+		if (port == null) {
+			RestAssured.port = Integer.valueOf(8080);
+		} else {
+			RestAssured.port = Integer.valueOf(port);
+		}
 
+		String basePath = System.getProperty("server.base");
+		
+		if (basePath == null) {
+			basePath = "/jersey-swagger/rest/";
+		}
+		
+		RestAssured.basePath = basePath;
 
-        String basePath = System.getProperty("server.base");
-        if(basePath==null){
-            basePath = "/jersey-swagger/rest/";
-        }
-        RestAssured.basePath = basePath;
+		String baseHost = System.getProperty("server.host");
+		
+		if (baseHost == null) {
+			baseHost = "http://localhost";
+		}
+		
+		RestAssured.baseURI = baseHost;
 
-        String baseHost = System.getProperty("server.host");
-        if(baseHost==null){
-            baseHost = "http://localhost";
-        }
-        RestAssured.baseURI = baseHost;
-
-    }
+	}
 
 }

@@ -1,5 +1,5 @@
-<xsd:schema xmlns="http://com.sample.spring.jersey.swagger/schema/beans/response"
-            targetNamespace="http://com.sample.spring.jersey.swagger/schema/beans/response"
+<xsd:schema xmlns="http://com.example.spring.jersey.swagger/schema/beans/response"
+            targetNamespace="http://com.example.spring.jersey.swagger/schema/beans/response"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
             xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
